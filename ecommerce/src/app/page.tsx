@@ -7,7 +7,7 @@ export default function Home() {
       <div className={styles.headerImageContainer}>
         <div className={styles.blackTint}></div>
         <Image
-          src="/home-header-2.jpg"
+          src="/home-header-4-2.jpg"
           alt=""
           className={`h-full w-full ${styles.headerImage}`}
           layout="fill"
