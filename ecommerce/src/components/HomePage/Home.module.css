@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.headerImageContainer {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.headerImage {
+  /* object-position: bottom; */
+  object-fit: cover;
+  object-position: center 65%;
+}
+
+.blackTint {
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.headerText {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  max-width: 40%;
+  word-wrap: break-word;
+}
+
+.headerText h1 {
+  font-size: 58px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 58px;
+}
+
+.headerText p {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.shopButton {
+  background-color: white;
+  color: black;
+  padding: 15px 40px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: "raleway", sans-serif;
+}

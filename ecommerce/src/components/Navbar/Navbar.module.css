@@ -1,0 +1,44 @@
+.navbarContainer {
+  padding: 0.5rem 10%;
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.navbarContainer a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.navRight {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.navCenter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.navLeft {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
