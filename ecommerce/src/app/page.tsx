@@ -12,7 +12,8 @@ export default function Home() {
           className={`h-full w-full ${styles.headerImage}`}
           layout="fill"
           // objectFit="cover"
-          quality={100}
+          // quality={100}
+          priority={true}
         ></Image>
         <div className={styles.headerText}>
           <p>THE BEST CALISTHENICS SHOP</p>
