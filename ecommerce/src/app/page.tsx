@@ -17,7 +17,7 @@ export default function Home() {
         ></Image>
         <div className={styles.headerText}>
           <p>THE BEST CALISTHENICS SHOP</p>
-          <h1>New Clothing, Discounts, and Free Beanie in Every Order</h1>
+          <h1>Discover Our Latest Collection and Exclusive Offers</h1>
           <button className={styles.shopButton}>
             <Link href="/shop">SHOP NOW</Link>
           </button>
