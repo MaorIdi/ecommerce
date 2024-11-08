@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./ProductCard.module.css";
 import Image from "next/image";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 type ProductProps = {
   title: string;
@@ -12,13 +13,38 @@ type ProductProps = {
 
 const Product = (props: ProductProps) => {
   const [showImage, setShowImage] = React.useState(false);
-  const handleExpand = (e: any) => {
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    } else {
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (showImage) {
+        setShowImage(false);
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+      }
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && !document.fullscreenElement) {
+        setShowImage(false);
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [showImage]);
+
+  const handleExpand = () => {
+    if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
     }
   };
+
   return (
     <>
       {showImage && (
@@ -57,12 +83,10 @@ const Product = (props: ProductProps) => {
         <div className={styles.productImageOuter}>
           <Image
             src={props.image}
-            alt="Gymnast Rings"
+            alt=""
             layout="fill"
             className={styles.productImage}
-            onClick={() => setShowImage(!showImage)}
-            // width={500}
-            // height={500}
+            onClick={() => setShowImage(true)}
           />
         </div>
         <div className={styles.productDetails}>
