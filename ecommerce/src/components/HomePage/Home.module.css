@@ -70,3 +70,11 @@
   margin-top: 20px;
   font-family: "raleway", sans-serif;
 }
+
+.productsSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 2rem;
+}

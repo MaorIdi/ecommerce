@@ -1,0 +1,20 @@
+.cartBtn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  filter: brightness(1.2);
+}
+
+.cartBtn:active {
+  filter: brightness(0.8);
+  transform: scale(0.95);
+}
+
+.cartBtn {
+  transition: all 0.2s ease;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 50%;
+}
